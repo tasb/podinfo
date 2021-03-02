@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: podinfo
+  name: mypodinfo
 spec:
   minReadySeconds: 3
   revisionHistoryLimit: 5
@@ -22,7 +22,7 @@ spec:
         app: podinfo
     spec:
       containers:
-      - name: podinfod
+      - name: mypodinfod
         image: ghcr.io/stefanprodan/podinfo:5.1.4
         imagePullPolicy: IfNotPresent
         ports:
